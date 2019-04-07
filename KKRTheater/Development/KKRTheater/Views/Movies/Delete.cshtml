@@ -1,0 +1,18 @@
+﻿@model MovieDeleteModel
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">Delete @Model.Title</h2>
+    </div>
+</div>
+
+<div class="row">Are you sure you want to delete?</div>
+
+<div class="panel panel-danger">
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-info">Back to List</a>
+    </form>
+</div>
+

@@ -1,0 +1,89 @@
+﻿@model MovieEditModel
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">Update @Model.Title</h2>
+    </div>
+
+    <div id="movieForm" class="panel panel-primary">
+        <div>
+            <div class="form-group">
+                <label asp-for="Title">Movie Title:</label>
+                <input asp-for="Title" class="form-control" form="movieForm" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year">Movie Release Year:</label>
+                <input asp-for="Year" class="form-control" form="movieForm" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Director" class="control-label"></label>
+                <select asp-for="DirectorId" class="form-control" asp-items="ViewBag.DirectorId" form="movieForm">
+                    <option value="">-- Select Director --</option>
+                </select>
+                <span asp-validation-for="Director" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Runtime">Movie Run Time (minutes):</label>
+                <input asp-for="Runtime" class="form-control" form="movieForm" />
+                <span asp-validation-for="Runtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Revenue">Movie Revenue:</label>
+                <input asp-for="Revenue" class="form-control" form="movieForm" />
+                <span asp-validation-for="Revenue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Movie Description:</label>
+                <textarea asp-for="Description" class="form-control" form="movieForm"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <form asp-controller="Movies" asp-action="Edit" method="get">
+            <p>
+                Actor Name: <input type="text" name="actorSearchName">
+                <input type="hidden" asp-for="@Model.Id" />
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
+
+        <form asp-action="Edit" asp-controller="Actors" method="post" id="actorForm">
+            <ul>
+
+                @for (var i = 0; i < Model.AssignedActors.Count; i++)
+                {
+                    <li>
+                        <input type="checkbox" asp-for="@Model.AssignedActors[i].Assigned" />
+                        <label asp-for="@Model.AssignedActors[i].Assigned">@Model.AssignedActors[i].Name</label>
+                        <input type="hidden" asp-for="@Model.AssignedActors[i].Id" />
+                        <input type="hidden" asp-for="@Model.AssignedActors[i].Name" />
+                    </li>
+                }
+            </ul>
+
+            <ul>
+
+                @for (var i = 0; i < Model.AssignedGenres.Count; i++)
+                {
+                    <li>
+                        <input type="checkbox" asp-for="@Model.AssignedGenres[i].Assigned" />
+                        <label asp-for="@Model.AssignedGenres[i].Assigned">@Model.AssignedGenres[i].Name</label>
+                        <input type="hidden" asp-for="@Model.AssignedGenres[i].Id" />
+                        <input type="hidden" asp-for="@Model.AssignedGenres[i].Name" />
+                    </li>
+                }
+            </ul>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> Update Actor</button>
+            </div>
+        </form>
+    </div>
+
+</div>

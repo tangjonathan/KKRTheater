@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>
+    KKRTheater
+</h2>
+<div class="container">
+    <div class="col-md-4 text-center">
+        <a asp-controller="Movies" asp-action="Index" class="btn btn-primary btn-lg btn-block">
+            Movies
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <a asp-controller="Actors" asp-action="Index" class="btn btn-success btn-lg btn-block">
+            Actors
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <a asp-controller="Directors" asp-action="Index" class="btn btn-info btn-lg btn-block">
+            Directors
+        </a>
+    </div>
+</div>

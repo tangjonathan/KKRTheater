@@ -1,0 +1,64 @@
+﻿@model MovieDetailModel
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">@Model.Title</h2>
+    </div>
+
+    <div class="small-padding">
+        <a asp-controller="Movies" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-lg">
+            Edit
+        </a> 
+        <a asp-controller="Movies" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-lg">
+            Delete
+        </a>
+    </div>
+
+    <div class="small-padding">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <h3>Info</h3>
+                <div class="bg-info group-border">
+                    <div class="mini-padding"><span class="panelHeader">Title:</span> @Model.Title</div>
+                    <div class="mini-padding"><span class="panelHeader">Year Released:</span> @Model.Year</div>
+                    <div class="mini-padding">
+                        <span class="panelHeader">Director:</span>
+                        <a asp-controller="Directors" asp-action="Detail" asp-route-id="@Model.Director.Id">
+                            @Model.Director.Name
+                        </a>
+                    </div>
+                    <div class="mini-padding"><span class="panelHeader">Runtime (minutes): </span> @Model.Runtime</div>
+                    <div class="mini-padding"><span class="panelHeader">Revenue ($MM):</span> @Model.Revenue</div>
+                    <div class="mini-padding"><span class="panelHeader">Description:</span> @Model.Description</div>
+                </div>
+                <div>
+                    <h3>Actors</h3>
+                    <ul class="list-group">
+                        @foreach (KeyValuePair<int, string> actor in Model.Actors)
+                        {
+                            <li class="list-group-item">
+                                <a asp-controller="Actors" asp-action="Detail" asp-route-id="@actor.Key">
+                                    @actor.Value
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div>
+                    <h3>Genres</h3>
+                    <ul class="list-group">
+                        @foreach (KeyValuePair<int, string> genre in Model.Genres)
+                        {
+                            <li class="list-group-item">
+                                <a asp-controller="Genres" asp-action="Detail" asp-route-id="@genre.Key">
+                                    @genre.Value
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

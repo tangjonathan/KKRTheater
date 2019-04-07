@@ -1,0 +1,41 @@
+﻿@model DirectorAddModel
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">Add Actor</h2>
+    </div>
+</div>
+
+<div id="actorForm" class="">
+    <form action="Add" method="post">
+        <div class="form-group">
+            <label asp-for="Name">Director Name:</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Birthday">Birthday:</label>
+            <input asp-for="Birthday" class="form-control" />
+            <span asp-validation-for="Birthday" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Birthplace">Birthplace:</label>
+            <input asp-for="Birthplace" class="form-control" />
+            <span asp-validation-for="Birthplace" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Bio">Bio:</label>
+            <textarea asp-for="Bio" class="form-control"></textarea>
+            <span asp-validation-for="Bio" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> Add Actor</button>
+        </div>
+    </form>
+</div>

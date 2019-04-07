@@ -1,0 +1,53 @@
+﻿@model MovieAddModel
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">Add Movie</h2>
+    </div>
+
+    <div id="movieForm" class="panel panel-primary">
+        <form action="Add" method="post" class="panel-body">
+            <div class="form-group">
+                <label asp-for="Title">Movie Title:</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year">Movie Release Year:</label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Director" class="control-label"></label>
+                <select asp-for="DirectorId" class="form-control" asp-items="ViewBag.DirectorId">
+                    <option value="">-- Select Director --</option>
+                </select>
+                <span asp-validation-for="Director" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Runtime">Movie Run Time (minutes):</label>
+                <input asp-for="Runtime" class="form-control" />
+                <span asp-validation-for="Runtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Revenue">Movie Revenue:</label>
+                <input asp-for="Revenue" class="form-control" />
+                <span asp-validation-for="Revenue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Movie Description:</label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> Add Movie</button>
+            </div>
+        </form>
+    </div>
+</div>

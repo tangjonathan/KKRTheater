@@ -1,0 +1,6 @@
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\bin\Debug\netcoreapp2.1\MovieData.deps.json
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\bin\Debug\netcoreapp2.1\MovieData.dll
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\obj\Debug\netcoreapp2.1\MovieData.csproj.CoreCompileInputs.cache
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\obj\Debug\netcoreapp2.1\MovieData.AssemblyInfoInputs.cache
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\obj\Debug\netcoreapp2.1\MovieData.AssemblyInfo.cs
+C:\Users\Jon\Documents\krr\app\MoviesApp\MovieData\obj\Debug\netcoreapp2.1\MovieData.csprojAssemblyReference.cache

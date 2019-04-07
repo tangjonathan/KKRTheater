@@ -1,0 +1,31 @@
+﻿@model GenreDetailModel
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">View Genre</h2>
+    </div>
+</div>
+
+
+<div class="">
+    <div class="">
+        <div class="col">
+            <p id="">@Model.Name</p>
+
+            <div>
+                <h3>Movies</h3>
+                <ul>
+                    @foreach (KeyValuePair<int,string> movie in Model.Movies)
+                    {
+                        <li>
+                            <a asp-controller="Movies" asp-action="Detail" asp-route-id="@movie.Key">
+                                @movie.Value
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+﻿@model GenreIndexModel
+<div class="container">
+    <h3>Genre Catalog</h3>
+    <div class="row">
+        <table class="table-striped table-condensed table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    @foreach (var genre in Model.Genres)
+                    {
+
+                        <tr class="">
+                            <td class="row">@counter</td>
+                            <td class="">@genre.Name</td>
+                            <td class="">
+                                <a asp-controller="Genres" asp-action="Detail" asp-route-id="@genre.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+
+                        counter++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

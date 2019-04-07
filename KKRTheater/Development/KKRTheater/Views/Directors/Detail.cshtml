@@ -1,0 +1,44 @@
+﻿@model DirectorDetailModel
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">@Model.Name</h2>
+    </div>
+
+    <div class="row">
+        <a asp-controller="Directors" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-lg">
+            Edit
+        </a>
+        <a asp-controller="Directors" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-lg">
+            Delete
+        </a>
+    </div>
+
+    <div class="small-padding">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <h3>Info</h3>
+                <div class="bg-info group-border">
+                    <div class="mini-padding"><span class="panelHeader">Name:</span> @Model.Name</div>
+                    <div class="mini-padding"><span class="panelHeader">Birthday:</span> @Model.Birthday</div>
+                    <div class="mini-padding"><span class="panelHeader">Birthplace:</span> @Model.Birthplace</div>
+                    <div class="mini-padding"><span class="panelHeader">Bio:</span> @Model.Bio</div>
+                </div>
+                <div>
+                    <h3>Movies</h3>
+                    <ul class="list-group">
+                        @foreach (KeyValuePair<int, string> movie in Model.Movies)
+                        {
+                            <li class="list-group-item">
+                                <a asp-controller="Movies" asp-action="Detail" asp-route-id="@movie.Key">
+                                    @movie.Value
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

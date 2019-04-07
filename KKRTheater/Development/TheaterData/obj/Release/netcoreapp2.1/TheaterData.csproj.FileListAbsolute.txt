@@ -1,0 +1,11 @@
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\bin\Release\netcoreapp2.1\TheaterData.deps.json
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\bin\Release\netcoreapp2.1\TheaterData.runtimeconfig.json
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\bin\Release\netcoreapp2.1\TheaterData.runtimeconfig.dev.json
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\bin\Release\netcoreapp2.1\TheaterData.dll
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\bin\Release\netcoreapp2.1\TheaterData.pdb
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.csprojAssemblyReference.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.csproj.CoreCompileInputs.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.AssemblyInfoInputs.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.AssemblyInfo.cs
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.dll
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterData\obj\Release\netcoreapp2.1\TheaterData.pdb

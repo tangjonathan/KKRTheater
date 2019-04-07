@@ -1,0 +1,12 @@
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\bin\Release\netcoreapp2.1\TheaterServices.deps.json
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\bin\Release\netcoreapp2.1\TheaterServices.dll
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\bin\Release\netcoreapp2.1\TheaterServices.pdb
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\bin\Release\netcoreapp2.1\TheaterData.dll
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\bin\Release\netcoreapp2.1\TheaterData.pdb
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.csprojAssemblyReference.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.csproj.CoreCompileInputs.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.AssemblyInfoInputs.cache
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.AssemblyInfo.cs
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.csproj.CopyComplete
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.dll
+C:\Users\Jon\Documents\krr\app\KKRTheater\TheaterServices\obj\Release\netcoreapp2.1\TheaterServices.pdb

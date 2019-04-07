@@ -1,0 +1,18 @@
+﻿@model DirectorDeleteModel
+
+<div class="container">
+    <div class="page-header clearfix">
+        <h2 class="text-muted">Delete @Model.Name</h2>
+    </div>
+</div>
+
+<div>Are you sure you want to delete?</div>
+
+<div class="">
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+

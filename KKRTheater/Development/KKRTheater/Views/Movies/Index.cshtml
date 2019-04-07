@@ -1,0 +1,50 @@
+﻿@model MovieIndexModel
+<div class="container">
+    <h3>Movie Catalog</h3>
+    <div class="small-padding">
+        <a asp-controller="Movies" asp-action="Add" class="btn btn-primary btn-lg">
+            Add Movie
+        </a>
+    </div>
+    <div class="small-padding">
+        <table class="table-striped table-condensed table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Revenue ($MM)</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    @foreach (var movie in Model.Movies)
+                    {
+
+                        <tr class="">
+                            <td class="row">@counter</td>
+                            <td class="">@movie.Title</td>
+                            <td class="">@movie.Year</td>
+                            <td class="">@movie.Revenue</td>
+                            <td class="">
+                                <a asp-controller="Movies" asp-action="Detail" asp-route-id="@movie.Id">
+                                    Details
+                                </a> |
+                                <a asp-controller="Movies" asp-action="Edit" asp-route-id="@movie.Id">
+                                    Edit
+                                </a> |
+                                <a asp-controller="Movies" asp-action="Delete" asp-route-id="@movie.Id">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        counter++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

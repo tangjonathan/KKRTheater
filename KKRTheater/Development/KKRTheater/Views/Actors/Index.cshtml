@@ -1,0 +1,41 @@
+﻿@model ActorIndexModel
+<div class="container">
+    <h3>Actor Catalog</h3>
+    <div class="mt-2">
+        <a asp-controller="Actors" asp-action="Add" class="btn btn-primary btn-lg">
+            Add Actor
+        </a>
+    </div>
+    <divclass="mt-2">
+        <table class="table-striped table-condensed table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    @foreach (var actor in Model.Actors)
+                    {
+
+                        <tr class="">
+                            <td class="row">@counter</td>
+                            <td class="">@actor.Name</td>
+                            <td class="">
+                                <a asp-controller="Actors" asp-action="Detail" asp-route-id="@actor.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+
+                        counter++;
+                    }
+                }
+            </tbody>
+        </table>
+    </divclass="mt-2">
+</div>
+

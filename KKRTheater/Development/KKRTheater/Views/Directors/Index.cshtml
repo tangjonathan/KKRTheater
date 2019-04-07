@@ -1,0 +1,41 @@
+﻿@model DirectorIndexModel
+<div class="container-fluid">
+    <h3>Director Catalog</h3>
+    <div class="mt-2">
+        <a asp-controller="Directors" asp-action="Add" class="btn btn-primary btn-lg">
+            Add Director
+        </a>
+    </div>
+    <div class="mt-2">
+        <table class="table-striped table-condensed table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    @foreach (var director in Model.Directors)
+                    {
+
+                        <tr class="">
+                            <td class="row">@counter</td>
+                            <td class="">@director.Name</td>
+                            <td class="">
+                                <a asp-controller="Directors" asp-action="Detail" asp-route-id="@director.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+
+                        counter++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
